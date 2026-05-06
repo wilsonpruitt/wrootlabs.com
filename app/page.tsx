@@ -47,9 +47,9 @@ const products: Product[] = [
   {
     name: "nave.build",
     description:
-      "Quiet, careful church websites — built in a week, then handed off or hosted for $10 a month. A productized version of the church-website work we already do.",
+      "Quiet, careful church websites for parishes. $99 to build, set up in a week. Yours to host, or ours to keep tended for $10 a month. A productized version of the church-website work we already do.",
     href: "https://nave.build",
-    meta: "Live · $99 build / $10 mo hosted",
+    meta: "Live · $99 build, optional $10/mo hosting",
   },
   {
     name: "Cupboard",
