@@ -21,14 +21,28 @@ const products: Product[] = [
     description:
       "Multi-tenant church management for small and mid-sized parishes — bulletins, services, contact lists, and the rota in one place. Built on the operational lessons of running a parish for ten years.",
     href: "https://chapelapp.com",
-    meta: "Live",
+    meta: "Beta",
   },
   {
     name: "Book the Church",
     description:
       "Venue booking for parishes that hire out their hall, sanctuary, or fellowship space. Calendar, deposits, rental hours, and the boring paperwork — handled.",
     href: "https://www.bookthechurch.com",
-    meta: "Live",
+    meta: "Beta",
+  },
+  {
+    name: "Charles",
+    description:
+      "Music arrangement for the local church — hymn settings, choir parts, accompaniment, tailored to the musicians you actually have on a given Sunday.",
+    href: "https://www.charlesscore.app",
+    meta: "Beta",
+  },
+  {
+    name: "Clara",
+    description:
+      "Music arrangement and orchestration for working musicians — variations, scoring, and parts generated around a tested arrangement engine.",
+    href: "https://clarascore.app",
+    meta: "Beta",
   },
   {
     name: "Cupboard",
