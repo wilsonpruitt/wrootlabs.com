@@ -233,7 +233,8 @@ export default function TermsPage() {
       <footer className={styles.footer}>
         <span>© Wroot Labs LLC. Built in Austin, Texas.</span>
         <span>
-          <a href="/privacy">Privacy</a> · <a href="/">wrootlabs.com</a>
+          <a href="/privacy">Privacy</a> · <a href="/support">Support</a> ·{" "}
+          <a href="/">wrootlabs.com</a>
         </span>
       </footer>
     </div>
