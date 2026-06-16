@@ -115,6 +115,62 @@
   color: var(--ink);
 }
 
+.feature {
+  background: var(--fen);
+  border-radius: var(--r-card);
+  border-left: 3px solid var(--reed);
+  padding: var(--s-7);
+  color: var(--fg-on-fen);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.featureEyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--reed);
+  margin: 0;
+}
+.featureTitle {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+  color: var(--fg-on-fen);
+  margin: 0;
+}
+.featureText {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(18px, 2.2vw, 21px);
+  line-height: 1.5;
+  color: var(--ivory);
+  opacity: 0.94;
+  max-width: var(--measure-prose);
+  margin: 0;
+}
+.featureLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-5);
+  margin-top: var(--s-2);
+}
+.featureLink {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--fg-on-fen);
+  border-bottom: 1px solid var(--reed);
+  padding-bottom: 2px;
+}
+.featureLink:hover {
+  color: var(--reed);
+  border-bottom-color: var(--reed-deep);
+}
+
 .footer {
   border-top: 1px solid var(--border);
   padding: var(--s-7) 0;

@@ -115,6 +115,36 @@ export default function HomePage() {
         </section>
 
         <section className={styles.shell}>
+          <div className={styles.feature}>
+            <p className={styles.featureEyebrow}>Featured · something different</p>
+            <h2 className={styles.featureTitle}>Kitchen Cabinet</h2>
+            <p className={styles.featureText}>
+              A playable simulation of the one season in Methodist life that
+              nobody outside the room ever sees: the bishop and cabinet matching
+              pastors to churches, where filling one pulpit empties another.
+              Fictional, but true to how the work actually feels — and the most
+              inventive thing we&rsquo;ve made.
+            </p>
+            <div className={styles.featureLinks}>
+              <a
+                className={styles.featureLink}
+                href="https://cabinet.wrootlabs.com"
+                rel="noopener"
+              >
+                Play the game →
+              </a>
+              <a
+                className={styles.featureLink}
+                href="https://cabinet.wrootlabs.com/vision"
+                rel="noopener"
+              >
+                Read the vision →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.shell}>
           <h2 className={styles.eyebrow}>Products</h2>
           <ul className={styles.titleList}>
             {products.map((p) => (
