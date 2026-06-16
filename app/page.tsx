@@ -116,31 +116,47 @@ export default function HomePage() {
 
         <section className={styles.shell}>
           <div className={styles.feature}>
-            <p className={styles.featureEyebrow}>Featured · something different</p>
-            <h2 className={styles.featureTitle}>Kitchen Cabinet</h2>
-            <p className={styles.featureText}>
-              A playable simulation of the one season in Methodist life that
-              nobody outside the room ever sees: the bishop and cabinet matching
-              pastors to churches, where filling one pulpit empties another.
-              Fictional, but true to how the work actually feels — and the most
-              inventive thing we&rsquo;ve made.
-            </p>
-            <div className={styles.featureLinks}>
-              <a
-                className={styles.featureLink}
-                href="https://cabinet.wrootlabs.com"
-                rel="noopener"
-              >
-                Play the game →
-              </a>
-              <a
-                className={styles.featureLink}
-                href="https://cabinet.wrootlabs.com/vision"
-                rel="noopener"
-              >
-                Read the vision →
-              </a>
+            <div className={styles.featureBody}>
+              <p className={styles.featureEyebrow}>Featured · something different</p>
+              <h2 className={styles.featureTitle}>Kitchen Cabinet</h2>
+              <p className={styles.featureText}>
+                A playable simulation of the one season in Methodist life that
+                nobody outside the room ever sees: the bishop and cabinet
+                matching pastors to churches, where filling one pulpit empties
+                another. Fictional, but true to how the work actually feels —
+                and the most inventive thing we&rsquo;ve made.
+              </p>
+              <div className={styles.featureLinks}>
+                <a
+                  className={styles.featureLink}
+                  href="https://cabinet.wrootlabs.com"
+                  rel="noopener"
+                >
+                  Play the game →
+                </a>
+                <a
+                  className={styles.featureLink}
+                  href="https://cabinet.wrootlabs.com/vision"
+                  rel="noopener"
+                >
+                  Read the vision →
+                </a>
+              </div>
             </div>
+            <a
+              className={styles.featureShot}
+              href="https://cabinet.wrootlabs.com"
+              rel="noopener"
+              aria-label="Open the Kitchen Cabinet game board"
+            >
+              <Image
+                className={styles.featureShotImg}
+                src="/cabinet-board.png"
+                alt="The Kitchen Cabinet appointment-season game board"
+                width={1020}
+                height={458}
+              />
+            </a>
           </div>
         </section>
 

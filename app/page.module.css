@@ -121,9 +121,34 @@
   border-left: 3px solid var(--reed);
   padding: var(--s-7);
   color: var(--fg-on-fen);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--s-7);
+  align-items: center;
+}
+.featureBody {
   display: flex;
   flex-direction: column;
   gap: var(--s-3);
+}
+.featureShot {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 106, 0.45);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  line-height: 0;
+}
+.featureShotImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 720px) {
+  .feature {
+    grid-template-columns: 1fr;
+    gap: var(--s-5);
+  }
 }
 .featureEyebrow {
   font-family: var(--sans);
