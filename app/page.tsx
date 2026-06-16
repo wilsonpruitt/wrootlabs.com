@@ -10,25 +10,39 @@ type Product = {
 
 const products: Product[] = [
   {
+    name: "Lampstand",
+    description:
+      "An editorial audit of your church's website, delivered as a designed PDF. Page-by-page Keep / Rewrite / Cut verdicts, plus a voice and audience read — pastoral judgment, not a rebuild.",
+    href: "https://lampstand.review",
+    meta: "Live · $49 / $149",
+  },
+  {
+    name: "Echo",
+    description:
+      "Social-media autopilot for small and mid-sized churches. Sunday's sermon and the week's photos become a consistent week of posts with one short Monday approval. Show, don't tell.",
+    href: "https://echochurch.app",
+    meta: "Beta · from $90/yr",
+  },
+  {
     name: "Fairshare",
     description:
       "Apportionment planning for connexional Methodist churches. Pulls your conference's published share table, lets you model giving scenarios, and outputs a budget line you can defend at finance committee.",
     href: "https://www.fairshare.church",
-    meta: "Live · 5 conferences supported",
+    meta: "Live · $24/yr · 5 conferences",
   },
   {
     name: "Chapel",
     description:
       "Multi-tenant church management for small and mid-sized parishes — bulletins, services, contact lists, and the rota in one place. Built on the operational lessons of running a parish for ten years.",
     href: "https://chapelapp.com",
-    meta: "Beta",
+    meta: "Beta · free under 50 · $90/yr",
   },
   {
     name: "Book the Church",
     description:
       "Venue booking for parishes that hire out their hall, sanctuary, or fellowship space. Calendar, deposits, rental hours, and the boring paperwork — handled.",
     href: "https://www.bookthechurch.com",
-    meta: "Beta",
+    meta: "Beta · $90/yr",
   },
   {
     name: "Charles",
@@ -55,8 +69,22 @@ const products: Product[] = [
     name: "Cupboard",
     description:
       "Tools for small feeding ministries — pantry intake, household tracking, monthly stakeholder reports. Productized from the workflows of a working food pantry that's been running for years.",
-    href: "#",
-    meta: "In preparation",
+    href: "https://cupboard.cc",
+    meta: "Beta · $99 one-time",
+  },
+  {
+    name: "Plenary",
+    description:
+      "Annual conference companion for Methodist delegates — standing rules, agenda, committee motions, and Book of Discipline references in one place during session. Built for the floor, not the office.",
+    href: "https://plenary.wrootlabs.com",
+    meta: "Live",
+  },
+  {
+    name: "Teller",
+    description:
+      "Phone-based shadow voting for annual conference sessions — a parallel tally that lets delegates and observers see how a vote would have gone, with lay and clergy preserved and anonymity protected.",
+    href: "https://teller.wrootlabs.com",
+    meta: "Live",
   },
 ];
 
