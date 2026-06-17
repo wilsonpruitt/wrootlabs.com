@@ -24,6 +24,21 @@
     min-height: 1.18in;
   }
   .pcard.overview { border-left-color: var(--fen); background: var(--bg-sunken, #EFEAE0); }
+  .pcard.free { border-left-color: var(--emerald); }
+  .pcard.free .pprice { color: var(--emerald); }
+  .pcard.module { border-left-color: var(--fen-mist); }
+  .pcard.module .pprice {
+    font-family: var(--sans); font-size: 8pt; font-weight: 600;
+    letter-spacing: 1.1px; text-transform: uppercase; color: var(--fen-mist);
+  }
+  .subhead {
+    font-family: var(--serif); font-size: 16pt; font-weight: 500; color: var(--fen);
+    margin: 16pt 0 2pt;
+  }
+  .subnote {
+    font-family: var(--sans); font-size: 9pt; color: var(--slate-600);
+    margin: 0 0 7pt; max-width: none;
+  }
   .ptext { flex: 1; }
   .pwho {
     font-family: var(--sans); font-size: 7.5pt; font-weight: 600;
@@ -96,7 +111,7 @@
       <div class="ptext">
         <p class="pwho">Methodist churches</p>
         <p class="pname">FairShare</p>
-        <p class="pdesc">Plan your apportionment and defend the number at finance committee.</p>
+        <p class="pdesc">Plan your apportionment, see where every dollar goes, and defend the number at finance committee.</p>
         <p class="pprice">$24 / yr</p>
         <p class="pdomain">fairshare.church</p>
       </div>
@@ -136,7 +151,7 @@
         <p class="pwho">Parishes</p>
         <p class="pname">nave.build</p>
         <p class="pdesc">Quiet, careful church websites — built in a week.</p>
-        <p class="pprice">$99 build · $10 / mo</p>
+        <p class="pprice">$50 build, or +$10/mo hosted</p>
         <p class="pdomain">nave.build</p>
       </div>
       <div class="pqr">
@@ -174,6 +189,91 @@
   <p class="signoff">
     Built by <em>Wilson Pruitt</em>, pastor, Covenant UMC Austin. Not affiliated with or endorsed by any annual conference.
     Prices shown are current as of June 2026.
+  </p>
+</section>
+
+<section class="page">
+  <p class="eyebrow">Wroot Labs · Free for the local church</p>
+  <h1>Free to use. <em>No sign-up to look.</em></h1>
+  <p class="lede">A few tools cost nothing — built for the wider work of the church and the conference. Scan and start.</p>
+
+  <div class="cgrid">
+    <div class="pcard free">
+      <div class="ptext">
+        <p class="pwho">Anyone discerning a call</p>
+        <p class="pname">Discerning a Call</p>
+        <p class="pdesc">A guided path through discernment and the candidacy process — five life-stage tracks.</p>
+        <p class="pprice">Free</p>
+        <p class="pdomain">discern.wrootlabs.com</p>
+      </div>
+      <div class="pqr">
+        <img src="qr-cat-discern.svg" alt="Scan to open Discerning a Call">
+        <p class="scan">Scan</p>
+      </div>
+    </div>
+    <div class="pcard free">
+      <div class="ptext">
+        <p class="pwho">Conference delegates</p>
+        <p class="pname">Field Guide</p>
+        <p class="pdesc">Everything a delegate needs for annual conference — the Discipline, the schedule, the reports, and a place to ask.</p>
+        <p class="pprice">Free</p>
+        <p class="pdomain">guide.wrootlabs.com</p>
+      </div>
+      <div class="pqr">
+        <img src="qr-cat-guide.svg" alt="Scan to open Field Guide">
+        <p class="scan">Scan</p>
+      </div>
+    </div>
+    <div class="pcard free">
+      <div class="ptext">
+        <p class="pwho">Anyone curious about appointments</p>
+        <p class="pname">Kitchen Cabinet</p>
+        <p class="pdesc">A hands-on simulator of appointment season — see how a cabinet moves pastors between churches.</p>
+        <p class="pprice">Free</p>
+        <p class="pdomain">cabinet.wrootlabs.com</p>
+      </div>
+      <div class="pqr">
+        <img src="qr-cat-cabinet.svg" alt="Scan to open Kitchen Cabinet">
+        <p class="scan">Scan</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="subhead">Exploratory modules</p>
+  <p class="subnote">Bigger tools we're piloting with conferences and districts. Have a look — and tell us if yours wants in.</p>
+
+  <div class="cgrid">
+    <div class="pcard module">
+      <div class="ptext">
+        <p class="pwho">Districts</p>
+        <p class="pname">Connexion</p>
+        <p class="pdesc">Map a district&#x27;s clergy and build peer cohorts for mutual support.</p>
+        <p class="pprice">Exploratory</p>
+        <p class="pdomain">connexion.wrootlabs.com</p>
+      </div>
+      <div class="pqr">
+        <img src="qr-cat-connexion.svg" alt="Scan to open Connexion">
+        <p class="scan">Scan</p>
+      </div>
+    </div>
+    <div class="pcard module">
+      <div class="ptext">
+        <p class="pwho">Conferences</p>
+        <p class="pname">Plenary</p>
+        <p class="pdesc">Run the floor — agenda, motions, and live voting for plenary sessions.</p>
+        <p class="pprice">Exploratory</p>
+        <p class="pdomain">plenary.wrootlabs.com</p>
+      </div>
+      <div class="pqr">
+        <img src="qr-cat-plenary.svg" alt="Scan to open Plenary">
+        <p class="scan">Scan</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="signoff">
+    Built by <em>Wilson Pruitt</em>, pastor, Covenant UMC Austin. Not affiliated with or endorsed by any annual conference.
+    Everything on this page is free to try at wrootlabs.com.
   </p>
 </section>
 </body>

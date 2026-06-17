@@ -1,0 +1,92 @@
+/* /soon — "what we're building next" (Marks of Ministry). Shared bits reuse ../page.module.css */
+
+.backLink {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fen-mist);
+  border-bottom: 1px solid var(--border-strong);
+}
+.backLink:hover {
+  color: var(--ink);
+  border-bottom-color: var(--reed-deep);
+}
+
+/* The six marks, displayed as a row */
+.marks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-2) var(--s-3);
+  max-width: var(--measure-prose);
+  margin: var(--s-2) 0 0;
+}
+.mark {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.6vw, 26px);
+  line-height: 1.2;
+  color: var(--fg-quiet);
+}
+.markNext {
+  color: var(--fen);
+  border-bottom: 2px solid var(--reed);
+  padding-bottom: 2px;
+}
+.sep {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.6vw, 26px);
+  color: var(--slate-300, #b6b0a2);
+}
+
+/* A mark section (Sacrament / Justice) */
+.markBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+.markEyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--reed-deep);
+  margin: 0;
+}
+.markTitle {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.1;
+  color: var(--fen);
+  margin: 0;
+}
+.markBlurb {
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.9vw, 19px);
+  line-height: 1.6;
+  color: var(--fen-mist);
+  max-width: var(--measure-prose);
+  margin: 0;
+}
+
+/* "Coming soon" tag in place of the Visit link */
+.comingTag {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--reed-deep);
+  margin: 0;
+}
+
+.note {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--fg-quiet);
+  max-width: var(--measure-prose);
+  margin: 0;
+}

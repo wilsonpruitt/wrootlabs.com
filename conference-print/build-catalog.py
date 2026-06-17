@@ -15,7 +15,7 @@ PRODUCTS = [
      "Sunday's sermon becomes a week of social posts — one Monday approval.",
      "from $90 / yr", "https://echochurch.app"),
     ("fairshare", "FairShare", "Methodist churches",
-     "Plan your apportionment and defend the number at finance committee.",
+     "Plan your apportionment, see where every dollar goes, and defend the number at finance committee.",
      "$24 / yr", "https://www.fairshare.church"),
     ("chapel", "Chapel", "Small parishes",
      "Bulletins, services, contacts, and the rota for small parishes.",
@@ -25,10 +25,33 @@ PRODUCTS = [
      "$90 / yr", "https://www.bookthechurch.com"),
     ("nave", "nave.build", "Parishes",
      "Quiet, careful church websites — built in a week.",
-     "$99 build · $10 / mo", "https://nave.build"),
+     "$50 build, or +$10/mo hosted", "https://nave.build"),
     ("cupboard", "Cupboard", "Food pantries",
      "Intake, household tracking, and monthly reports for small feeding ministries.",
      "$99 one-time", "https://cupboard.cc"),
+]
+
+# Free tools — no charge, no sign-up to look (page 2)
+FREE = [
+    ("discern", "Discerning a Call", "Anyone discerning a call",
+     "A guided path through discernment and the candidacy process — five life-stage tracks.",
+     "Free", "https://discern.wrootlabs.com"),
+    ("guide", "Field Guide", "Conference delegates",
+     "Everything a delegate needs for annual conference — the Discipline, the schedule, the reports, and a place to ask.",
+     "Free", "https://guide.wrootlabs.com"),
+    ("cabinet", "Kitchen Cabinet", "Anyone curious about appointments",
+     "A hands-on simulator of appointment season — see how a cabinet moves pastors between churches.",
+     "Free", "https://cabinet.wrootlabs.com"),
+]
+
+# Exploratory modules — bigger tools in pilot with conferences & districts (page 2)
+MODULES = [
+    ("connexion", "Connexion", "Districts",
+     "Map a district's clergy and build peer cohorts for mutual support.",
+     "Exploratory", "https://connexion.wrootlabs.com"),
+    ("plenary", "Plenary", "Conferences",
+     "Run the floor — agenda, motions, and live voting for plenary sessions.",
+     "Exploratory", "https://plenary.wrootlabs.com"),
 ]
 
 INK = "#1A2128"
@@ -39,14 +62,15 @@ def make_qr(slug, url):
                                     dark=INK, light=None, border=0)
     return out.name
 
-for slug, *_rest, url in [(p[0], p[5]) for p in PRODUCTS]:
+for slug, url in [(p[0], p[5]) for p in PRODUCTS + FREE + MODULES]:
     make_qr(slug, url)
 make_qr("wrootlabs", "https://wrootlabs.com")
 
-def card(slug, name, who, desc, price, url):
+def card(slug, name, who, desc, price, url, variant=""):
     qr = f"qr-cat-{slug}.svg"
     domain = url.replace("https://", "").replace("http://", "").replace("www.", "")
-    return f"""    <div class="pcard">
+    cls = "pcard" + (f" {variant}" if variant else "")
+    return f"""    <div class="{cls}">
       <div class="ptext">
         <p class="pwho">{html.escape(who)}</p>
         <p class="pname">{html.escape(name)}</p>
@@ -61,6 +85,8 @@ def card(slug, name, who, desc, price, url):
     </div>"""
 
 cards = "\n".join(card(*p) for p in PRODUCTS)
+free_cards = "\n".join(card(*p, variant="free") for p in FREE)
+module_cards = "\n".join(card(*p, variant="module") for p in MODULES)
 
 overview = """    <div class="pcard overview">
       <div class="ptext">
@@ -101,6 +127,21 @@ doc = f"""<!doctype html>
     min-height: 1.18in;
   }}
   .pcard.overview {{ border-left-color: var(--fen); background: var(--bg-sunken, #EFEAE0); }}
+  .pcard.free {{ border-left-color: var(--emerald); }}
+  .pcard.free .pprice {{ color: var(--emerald); }}
+  .pcard.module {{ border-left-color: var(--fen-mist); }}
+  .pcard.module .pprice {{
+    font-family: var(--sans); font-size: 8pt; font-weight: 600;
+    letter-spacing: 1.1px; text-transform: uppercase; color: var(--fen-mist);
+  }}
+  .subhead {{
+    font-family: var(--serif); font-size: 16pt; font-weight: 500; color: var(--fen);
+    margin: 16pt 0 2pt;
+  }}
+  .subnote {{
+    font-family: var(--sans); font-size: 9pt; color: var(--slate-600);
+    margin: 0 0 7pt; max-width: none;
+  }}
   .ptext {{ flex: 1; }}
   .pwho {{
     font-family: var(--sans); font-size: 7.5pt; font-weight: 600;
@@ -152,8 +193,30 @@ doc = f"""<!doctype html>
     Prices shown are current as of June 2026.
   </p>
 </section>
+
+<section class="page">
+  <p class="eyebrow">Wroot Labs · Free for the local church</p>
+  <h1>Free to use. <em>No sign-up to look.</em></h1>
+  <p class="lede">A few tools cost nothing — built for the wider work of the church and the conference. Scan and start.</p>
+
+  <div class="cgrid">
+{free_cards}
+  </div>
+
+  <p class="subhead">Exploratory modules</p>
+  <p class="subnote">Bigger tools we're piloting with conferences and districts. Have a look — and tell us if yours wants in.</p>
+
+  <div class="cgrid">
+{module_cards}
+  </div>
+
+  <p class="signoff">
+    Built by <em>Wilson Pruitt</em>, pastor, Covenant UMC Austin. Not affiliated with or endorsed by any annual conference.
+    Everything on this page is free to try at wrootlabs.com.
+  </p>
+</section>
 </body>
 </html>"""
 
 (HERE / "catalog.html").write_text(doc, encoding="utf-8")
-print("wrote catalog.html +", len(PRODUCTS) + 1, "QR svgs")
+print("wrote catalog.html +", len(PRODUCTS) + len(FREE) + len(MODULES) + 1, "QR svgs")

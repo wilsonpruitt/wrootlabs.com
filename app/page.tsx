@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 type Product = {
@@ -239,6 +240,24 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className={styles.shell}>
+          <p className={styles.eyebrow}>What&rsquo;s next</p>
+          <p className={styles.missionLede}>
+            Rounding out the marks of ministry.
+          </p>
+          <div className={styles.missionBody}>
+            <p>
+              The tools above mostly serve the <em>ordering</em> of a
+              church&rsquo;s life. Next we&rsquo;re building for two more of the
+              things a pastor is ordained to — worship and the sacraments, and
+              the work of justice.{" "}
+              <Link className={styles.titleLink} href="/soon">
+                See what we&rsquo;re building →
+              </Link>
+            </p>
+          </div>
         </section>
       </main>
 
