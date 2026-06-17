@@ -1,0 +1,150 @@
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--reed-deep);
+  margin: 0 0 var(--s-3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  max-width: 560px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.label {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: var(--fen);
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field select,
+.field textarea {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg-raised);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-input);
+  padding: var(--s-3) var(--s-4);
+  width: 100%;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 88px;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+  border-color: var(--fen);
+}
+
+.checkGroup {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+.checkGroup .label {
+  margin-bottom: var(--s-2);
+}
+
+.checkRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--reed);
+  border-radius: var(--r-card);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: border-color var(--d-state) var(--ease-quiet),
+              background var(--d-state) var(--ease-quiet);
+}
+.checkRow:hover {
+  border-color: var(--border-strong);
+  background: var(--ivory);
+}
+.checkRow input[type="checkbox"] {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--fen);
+  flex-shrink: 0;
+}
+.checkRow strong {
+  font-weight: 600;
+  color: var(--fen);
+}
+.checkSub {
+  color: var(--fg-muted);
+}
+
+.btn {
+  align-self: flex-start;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--fg-on-fen);
+  background: var(--fen);
+  border: 1px solid var(--fen);
+  border-radius: var(--r-input);
+  padding: var(--s-3) var(--s-6);
+  cursor: pointer;
+  transition: background var(--d-state) var(--ease-quiet);
+}
+.btn:hover:not(:disabled) {
+  background: var(--ink);
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.error {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: #8B2C2C;
+  margin: 0;
+}
+
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  max-width: var(--measure-prose);
+}
+
+.signoff {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--fen-mist);
+  margin: var(--s-3) 0 0;
+}
