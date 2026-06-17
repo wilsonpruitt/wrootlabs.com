@@ -61,9 +61,9 @@ const products: Product[] = [
   {
     name: "nave.build",
     description:
-      "Quiet, careful church websites for parishes. $99 to build, set up in a week. Yours to host, or ours to keep tended for $10 a month. A productized version of the church-website work we already do.",
+      "Quiet, careful church websites for parishes. $50 to build, set up in a week. Yours to host, or ours to keep tended for $10 a month. A productized version of the church-website work we already do.",
     href: "https://nave.build",
-    meta: "Live · $99 build, optional $10/mo hosting",
+    meta: "Live · $50 build, optional $10/mo hosting",
   },
   {
     name: "Cupboard",
@@ -85,6 +85,20 @@ const products: Product[] = [
       "Phone-based shadow voting for annual conference sessions — a parallel tally that lets delegates and observers see how a vote would have gone, with lay and clergy preserved and anonymity protected.",
     href: "https://teller.wrootlabs.com",
     meta: "Live",
+  },
+  {
+    name: "Conference Field Guide",
+    description:
+      "Annual-conference orientation for the delegates who sit in session — what each agency does, how the agenda and motions work, and the Book of Discipline behind them, with room to ask questions, weigh perspectives, and propose corrections. Bilingual, with a site for each conference.",
+    href: "https://conferencefieldguide.org",
+    meta: "Live · Río Texas + North Georgia",
+  },
+  {
+    name: "Discern",
+    description:
+      "A guide for anyone sensing a call to ministry, meeting people where they actually are — youth, college, a second career, already in seminary — instead of flattening every path into one. The candidacy ladder, the orders, the seminaries, and the next concrete step, grounded in the Book of Discipline.",
+    href: "https://discern.wrootlabs.com",
+    meta: "Live · free, no login",
   },
 ];
 
