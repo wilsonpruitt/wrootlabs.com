@@ -54,6 +54,33 @@
   border-bottom: 1px solid var(--border);
 }
 
+.missionLede {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(26px, 3.4vw, 34px);
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  color: var(--fen);
+  max-width: var(--measure-prose);
+  margin: 0 0 var(--s-5);
+}
+
+.missionBody {
+  max-width: var(--measure-prose);
+}
+
+.missionBody p {
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.9vw, 19px);
+  line-height: 1.6;
+  color: var(--fen-mist);
+  margin: 0 0 var(--s-4);
+}
+
+.missionBody p:last-child {
+  margin-bottom: 0;
+}
+
 .titleList {
   list-style: none;
   margin: 0;

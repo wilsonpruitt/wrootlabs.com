@@ -115,6 +115,55 @@ export default function HomePage() {
         </section>
 
         <section className={styles.shell}>
+          <p className={styles.eyebrow}>Mission</p>
+          <p className={styles.missionLede}>
+            Give the local church back its time — and its authority.
+          </p>
+          <div className={styles.missionBody}>
+            <p>
+              The work of ministry — the gospel, healing, mercy, justice — keeps
+              getting crowded out by the work of keeping the institution
+              running: the admin, the reports, the rota, the opaque budgets. Our
+              tools take that off a pastor&rsquo;s desk, so the hours go back
+              where the calling is.
+            </p>
+            <p>
+              And because so much of how a church&rsquo;s money and authority
+              actually work is kept out of sight of the people who fund it, our
+              tools make it plain — what you give, where it goes, and the say you
+              already have. Not so churches do more, but so they are never
+              passive before the institution they hold up.
+            </p>
+            <p>
+              One aim under all of it: get the local church off the hamster wheel
+              of institutional survival, and back to the work it was made for —
+              making disciples, loving mercy, and walking humbly with God,
+              together.
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.shell}>
+          <p className={styles.eyebrow}>An invitation</p>
+          <p className={styles.missionLede}>
+            Know a tool that would serve this?
+          </p>
+          <div className={styles.missionBody}>
+            <p>
+              If there&rsquo;s a piece of software that would take busywork off
+              your ministry, or make a church&rsquo;s money and authority a
+              little clearer — and no one has built it yet — we&rsquo;d love to
+              hear it. Write to{" "}
+              <a href="mailto:wilson@wrootlabs.com?subject=An%20idea%20for%20Wroot%20Labs">
+                wilson@wrootlabs.com
+              </a>{" "}
+              and tell us the idea. If it serves the mission, we&rsquo;ll do our
+              best to build it.
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.shell}>
           <div className={styles.feature}>
             <div className={styles.featureBody}>
               <p className={styles.featureEyebrow}>Featured · something different</p>
