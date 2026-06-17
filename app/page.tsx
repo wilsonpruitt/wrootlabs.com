@@ -24,11 +24,11 @@ const products: Product[] = [
     meta: "Beta · from $90/yr",
   },
   {
-    name: "Fairshare",
+    name: "FairShare",
     description:
-      "Apportionment planning for connexional Methodist churches. Pulls your conference's published share table, lets you model giving scenarios, and outputs a budget line you can defend at finance committee.",
+      "Two apportionment tools for connexional Methodist churches: predict how budget decisions change your conference share before you file, and show your congregation exactly where every apportioned dollar goes — traced from conference ministries down to the General Church agencies it funds, with a printable bulletin insert.",
     href: "https://www.fairshare.church",
-    meta: "Live · $24/yr · 5 conferences",
+    meta: "Live · $24/yr",
   },
   {
     name: "Chapel",
